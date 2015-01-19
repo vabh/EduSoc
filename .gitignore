@@ -1,4 +1,4 @@
-'*.sql'
-'*.DS_STORE'
-'*.jpg'
-'*.pdf'
+*.sql
+*.DS_STORE
+*.jpg
+*.pdf
