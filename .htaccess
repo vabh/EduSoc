@@ -1,0 +1,14 @@
+# Turn on the engine
+RewriteEngine on
+
+# Restrict those requests which do NOT start with index.php, etc. and take them to index.php anyway.
+RewriteCond $1 !^(index\.php|images|coursedata|assets|robots\.txt)
+RewriteRule ^(.*)$ /edusoc/index.php/$1 [L]
+
+# Hotlink protection
+RewriteCond %{HTTP_REFERER} ^$
+RewriteCond %{HTTP_REFERER} !^http://([^./]+\.)?localhost [NC]
+RewriteRule \.(gif|jpe?g|png|mp4|bmp|js|css).*$ - [F]
+
+php_value upload_max_filesize 1000M
+php_value post_max_size 1000M
