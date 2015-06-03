@@ -39,11 +39,11 @@
 */
 
 /*global routes*/
-$route['default_controller'] = "main";
+$route['default_controller'] = "index.php/main";
 $route['404_override'] = '';
 $route['signup'] = 'users/signup';
 $route['logout'] = 'users/logout';
-$route['login'] = 'users/login';
+$route['login'] = 'index.php/users/login';
 $route['profile'] = 'users/profile';
 $route['profile/([a-zA-Z0-9]+)'] = 'users/profile/$1';
 $route['edit'] = 'users/edit';
